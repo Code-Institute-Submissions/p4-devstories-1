@@ -1,13 +1,11 @@
 # Devstories
 <h1 align="center">Devstories</h1>
 
-[View the live project here.](https://codeinstitute.net)
+[View the live project here.]()
 
 Devstories is a blog site for devevelopers to share their knowladge and projects that they are working describing how they made them but not going into too much detail but just a brief explination of their project. Its also a place were friends of developers can visit and see what their next project is that they are working on etc.
 
 For this project I wanted to make a blog site for developers where developers can sign up and make a blog about their own projects or anything related to tech my target audience is mainly developers or friends who are developers or looking for inspiration about new tech news or keeping in touch with developer friends and their progress.
-
-<h2 align="center"></h2>
 
 ## User Experience (UX)
 
@@ -26,7 +24,6 @@ For this project I wanted to make a blog site for developers where developers ca
 
         1. As a Returning Visitor, you will be able to find new or old blog posts that are on the site.
         2. As a Returning Visitor, you will be able to contact the website owner via email if you have any questions.
-        3. As a Returning Visitor, you will be able to .
 
     -   #### Frequent User Goals
         1. As a Frequent User, You will be to check to see if your blog post got more likes than before.
@@ -36,11 +33,14 @@ For this project I wanted to make a blog site for developers where developers ca
 
 -   ### Design
     -   #### Colour Scheme
-        -   The two main colours used are Code Insititue red, and white.
+        -   The two main colours used are white, and gray / black.
     -   #### Typography
         -   The Montserrat font is the main font used throughout the whole website with Sans Serif as the fallback font in case for any reason the font isn't being imported into the site correctly. Montserrat is a clean font used frequently in programming, so it is both attractive and appropriate.
     -   #### Imagery
-        -   Imagery is important. The large, background hero image is designed to be striking and catch the user's attention. It also has a modern, energetic aesthetic.
+        -   Imagery is important. The images are set up form the users when they create a blog on the site they can choose to add an image to make their blog stand out more.
+
+# Agile Development
+* ## Waterfall methodology
 
 *   ### Wireframes
 
@@ -49,6 +49,12 @@ For this project I wanted to make a blog site for developers where developers ca
     -   Mobile Wireframe:
 
     -   Contact Us Page Wireframe:
+  
+* ### Github - User Project Kanban Board
+    - During development I used the project kanban board in github for keeping track of the progress during development for the site.
+
+* ### ERD - Entity Relation Diagram schema
+    - (Database Schema Image) Before I started to code this project I created a Diagram Entity Relationship - Database Schema using dbdiagram. I created this to easier understand the database models that I was going to create for this project.
 
 ### Frameworks, Libraries & Programs Used
 
