@@ -29,9 +29,10 @@ For this project I wanted to make a blog site for developers where developers ca
         3. As a Returning Visitor, you will be able to .
 
     -   #### Frequent User Goals
-        1. As a Frequent User, I want to check to see if there are any newly added challenges or hackathons.
-        2. As a Frequent User, I want to check to see if there are any new blog posts.
-        3. As a Frequent User, I want to sign up to the Newsletter so that I am emailed any major updates and/or changes to the website or organisation.
+        1. As a Frequent User, You will be to check to see if your blog post got more likes than before.
+        2. As a Frequent User, You will be to check to see if there are any new blog posts.
+        3. As a Frequent User, You will be able to sign up to the Newsletter so that I am emailed any major updates and/or changes to the website or organisation.
+        4. As a Frequent User, You will be able to see if someone has commented on your post.
 
 -   ### Design
     -   #### Colour Scheme
