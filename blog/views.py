@@ -1,10 +1,16 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
-from django.views.generic import ListView, DetailView
-from django.contrib.auth.decorators import login_required
-from .models import Post
 from django.views.generic import (
-    View,)
+    View,
+    ListView,
+    UpdateView,
+    DeleteView)
+from django.urls import reverse_lazy
+from django.http import HttpResponseRedirect, HttpResponse
+from django.contrib.auth.decorators import login_required
+from django.template import loader
+from .models import Post, Comment
 from .forms import CommentForm, BlogPostForm
+from django.contrib import messages
 
 # Create your views here.
 
@@ -134,3 +140,32 @@ def delete_post(request, blog_post_id):
     messages.success(request, 'The blog has been deleted successfully!')
 
     return redirect('/')
+
+
+class CommentUpdateView(UpdateView):
+    """ Update comments via update_post.html """
+    model = Comment
+    form_class = CommentForm
+    context_object_name = 'comment'
+    template_name = 'update_post.html'
+
+    def form_valid(self, form):
+        """
+        Success url return to blogpost in question
+        with successfull commentform
+        """
+        self.success_url = f'/{self.get_object().post.slug}/'
+        return super().form_valid(form)
+
+
+class CommentDeleteView(DeleteView):
+    """ Connects comment to DeleteView function """
+    model = Comment
+    template_name = 'delete_comment_post.html'
+    context_object_name = 'comment'
+
+    def get_success_url(self, *args):
+        """ Success url return to blogpost in question """
+        self.success_url = f'/{self.get_object().post.slug}'
+        self.slug = self.get_object().post.slug
+        return reverse_lazy('post_detail', args=[self.slug])
