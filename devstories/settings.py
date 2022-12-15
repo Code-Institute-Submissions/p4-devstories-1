@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 if os.environ.get('ON_HEROKU', '0') == '0':
-    DEBUG = False
+    DEBUG = True
 else:
     DEBUG = False
 
@@ -41,6 +41,7 @@ ALLOWED_HOSTS = ["app-devstories.herokuapp.com", "localhost"]
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
+    'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'django.contrib.contenttypes',
@@ -52,7 +53,16 @@ INSTALLED_APPS = [
     'cloudinary',
     'blog',
     'django_summernote',
+    'crispy_forms',
 ]
+
+SITE_ID = 1
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+ACCOUNT_EMAIL_VERIFICATION = "none"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -83,8 +93,6 @@ TEMPLATES = [
         },
     },
 ]
-
-SITE_ID = 1
 
 WSGI_APPLICATION = 'devstories.wsgi.application'
 
