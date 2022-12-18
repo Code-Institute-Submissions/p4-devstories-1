@@ -124,7 +124,7 @@ class PostLike(View):
 
 
 @login_required
-def create(request):
+def create_post(request):
     """
     Allow an admin user to create a Blog Post
     """
@@ -154,6 +154,7 @@ def create(request):
         'form': form,
     }
     return render(request, template, context)
+
 
 
 # @login_required
