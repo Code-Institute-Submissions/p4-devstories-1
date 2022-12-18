@@ -17,5 +17,5 @@ class BlogPostForm(forms.ModelForm):
         model = Post
         fields = ('title', 'slug', 'content', 'featured_image', 'excerpt')
         lables = {
-            'title': _(''), 'slug': _(''), 'content': _(''), 'featured_image': _(''), 'excerpt': _(''),
+            'title': _(''), 'slug': _(''), 'content': _(''), 'featured_image': _(''), 'excerpt': (''),
         }
