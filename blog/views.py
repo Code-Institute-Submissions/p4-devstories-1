@@ -16,7 +16,7 @@ from django.core.mail import send_mail, BadHeaderError
 
 class PostList(ListView):
     model = Post
-    queryset = Post.objects.filter(status=1).order_by("-created_on")
+    queryset = Post.objects.order_by("-created_on")
     template_name = "index.html"
     paginate_by = 6
 
@@ -24,7 +24,7 @@ class PostList(ListView):
 class PostDetail(View):
 
     def get(self, request, slug, *args, **kwargs):
-        queryset = Post.objects.filter(status=1)
+        queryset = Post.objects.all()
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by("-created_on")
         liked = False
@@ -45,7 +45,7 @@ class PostDetail(View):
 
     def post(self, request, slug, *args, **kwargs):
 
-        queryset = Post.objects.filter(status=1)
+        queryset = Post.objects.all()
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by("-created_on")
         liked = False
@@ -136,8 +136,8 @@ def create_post(request):
                 blog_post = form.save(commit=False)
                 blog_post.author = request.user
                 blog_post.save()
-                messages.info(request, 'Blog Pending Approval!')
-                return redirect('/')
+                messages.info(request, 'Blog has been posted!')
+                return redirect(reverse('home'))
             else:
                 messages.error(request, 'Please check the form for errors. \
                     Blog failed to add.')
