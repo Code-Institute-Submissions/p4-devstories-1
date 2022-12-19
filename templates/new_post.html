@@ -7,7 +7,7 @@
   <div class="row">
     <div class="col-8 offset-2">
       <h2 class="text-center my-5">{% if update %}Update post{% else %}Create new blog post{% endif %}</h2>
-      <form method="post" action="{% url 'create_post' %}" enctype="multipart/form-data">
+      <form class="" method="post" action="{% url 'create_post' %}" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="form-group">
           {{ form.title.label_tag }}
