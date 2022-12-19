@@ -24,11 +24,11 @@
 </head>
 
 
-<body class="">
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand text-white" href="{% url 'home' %}"><span class="brand text-white">Dev<span class="red-o text-white">stor</span>ies<span
-                        class="thin"> | Dev Blogs | </span></span></span></a>
+                        class="thin"> Dev Blogs | </span></span></span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -48,7 +48,7 @@
                             {% if redirect_field_value %}
                             <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
                             {% endif %}
-                            <button class="nav-link active text-gray" type="submit">logout</button>
+                            <button class="nav-link active text-dark" type="submit">logout</button>
                           </form>
                     </li>
                     {% else %}
@@ -61,7 +61,7 @@
                     {% endif %}
                 </ul>
                 <span class="navbar-text text-white">
-                    Adventures of a Software Developer.
+                    The Journey of a Software Developer.
                 </span>
             </div>
         </div>
@@ -85,7 +85,7 @@
         {% endblock content %}
     </main>
 
-    <footer class="card text-center bg-dark mt-14 fixed-bottom">
+    <footer class="card text-center bg-dark mt-14">
         <div class="card-body text-white">
             <h5 class="card-title">Devstories</h5>
             <p class="card-text">This my personal blog site for displaying by projects blogs.</p>
