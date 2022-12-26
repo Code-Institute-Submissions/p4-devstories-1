@@ -40,8 +40,6 @@ For this project I wanted to make a blog site for developers where developers ca
         -   Imagery is important. The images are set up form the users when they create a blog on the site they can choose to add an image to make their blog stand out more.
 
 # Agile Development
-* ## Waterfall methodology
-
 *   ### Wireframes
 
     -   Home Page Wireframe:
