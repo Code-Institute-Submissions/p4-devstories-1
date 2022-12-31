@@ -81,6 +81,19 @@
     </div>
 
     <main class="flex-shrink-0 main-bg">
+        <!-- Hero -->
+            <div class="text-center bg-image" style="background-image: url({% static 'media/software-developer.jpg' %});
+                height: 400px;">
+            <div class="mask" style="background-color: rgba(0, 0, 0, 0.6); height: 400px;">
+                <div class="d-flex justify-content-center align-items-center h-100">
+                    <div class="text-white">
+                        <h1 class="mb-3">Devstories</h1>
+                        <h4 class="mb-3">A blog Site for Developers and Friends</h4>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!-- Hero -->
         {% block content %}
         {% endblock content %}
     </main>
@@ -88,7 +101,7 @@
     <footer class="card text-center bg-dark mt-14">
         <div class="card-body text-white">
             <h5 class="card-title">Devstories</h5>
-            <p class="card-text">This my personal blog site for displaying by projects blogs.</p>
+            <p class="card-text">This my personal blog site for talking about my projects.</p>
         </div>
         <div class="card-header text-white">
           <p>&copy; Devstories | 2022</p>
