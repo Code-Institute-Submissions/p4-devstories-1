@@ -1,7 +1,10 @@
 html, body {
-    background-color: #F9FAFC;
-    min-height: 100%;
+    background-color: gray;
   }
+
+.bg-image { 
+    margin-top: -20px;
+}
 
 .brand {
     font-family: Lato, sans-serif;
