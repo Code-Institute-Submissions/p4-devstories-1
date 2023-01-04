@@ -6,22 +6,24 @@
 <div class="container">
   <div class="row">
     <div class="col-8 offset-2">
-      <h2 class="text-center my-5">Update a post</h2>
-      <form class="" method="post" action="{% url 'create_post' %}" enctype="multipart/form-data">
+      <h2 class="text-center my-5">Updating {{ blog_post.title }}</h2>
+      <form class="" method="post" action="{% url 'update_post' slug=blog_post.slug %}" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="form-group">
           {{ form.title.label_tag }}
           <div id="div_id_title" class="form-group">
             <div>
               <input type="text" name="title" maxlength="200" class="textinput textInput form-control" required=""
-                id="id_title">
+                value="{{ blog_post.title }}" id="id_title">
             </div>
           </div>
           <div class="form-group">
             {{ form.slug.label_tag }}
             <div id="div_id_slug" class="form-group">
-              <div> <input type="text" name="slug" maxlength="200" class="textinput textInput form-control" required=""
-                  id="id_slug"> </div>
+              <div> 
+                <input type="text" name="slug" maxlength="200" class="textinput textInput form-control" required=""
+                value="{{ blog_post.slug }}" id="id_slug"> 
+              </div>
               {% if form.slug.errors %}
               <div class="invalid-feedback">{{ form.slug.errors }}</div>
               {% endif %}
@@ -31,7 +33,7 @@
               <div id="div_id_content" class="form-group">
                 <div>
                   <textarea name="content" cols="40" rows="10" class="textarea form-control" required=""
-                    id="id_content">
+                  value="{{ blog_post.content }}" id="id_content">
                   </textarea> 
                 </div>
                 {% if form.content.errors %}
@@ -51,11 +53,11 @@
                 <div id="div_id_excerpt" class="form-group">
                   {{ form.excerpt.label_tag }}
                   <div>
-                    <textarea name="excerpt" cols="40" rows="10" class="textarea form-control" id="id_excerpt">
+                    <textarea name="excerpt" cols="40" rows="10" class="textarea form-control" id="id_excerpt" value="{{ blog_post.excerpt }}">
                   </textarea>
                   </div>
                   <div class="my-5 text-center">
-                    <button class="btn btn-primary mb-2" type="submit">Create New Post</button>
+                    <button class="btn btn-primary mb-2" type="submit">Update Post</button>
                   </div>
       </form>
 
