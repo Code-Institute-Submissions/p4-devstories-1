@@ -26,7 +26,7 @@ class PostDetail(View):
     def get(self, request, slug, *args, **kwargs):
         queryset = Post.objects.all()
         post = get_object_or_404(queryset, slug=slug)
-        comments = post.comments.filter(approved=True).order_by("-created_on")
+        comments = post.comments.order_by("-created_on")
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
@@ -68,7 +68,7 @@ class PostDetail(View):
             {
                 "post": post,
                 "comments": comments,
-                "commented": True,
+                "commented": False,
                 "form": form,
                 "liked": liked,
                 "comment_form": CommentForm()
@@ -79,35 +79,6 @@ class PostDetail(View):
         """ validate form and connect to user """
         form.instance.created_by = self.request.user
         return super().form_valid(form)
-
-
-class CommentUpdateView(UpdateView):
-    """ Update comments via update_post.html """
-    model = Comment
-    form_class = CommentForm
-    context_object_name = 'comment'
-    template_name = 'update_post.html'
-
-    def form_valid(self, form):
-        """
-        Success url return to blogpost in question
-        with successfull commentform
-        """
-        self.success_url = f'/{self.get_object().post.slug}/'
-        return super().form_valid(form)
-
-
-class CommentDeleteView(DeleteView):
-    """ Connects comment to DeleteView function """
-    model = Comment
-    template_name = 'delete_comment_post.html'
-    context_object_name = 'comment'
-
-    def get_success_url(self, *args):
-        """ Success url return to blogpost in question """
-        self.success_url = f'/{self.get_object().post.slug}'
-        self.slug = self.get_object().post.slug
-        return reverse_lazy('post_detail', args=[self.slug])
 
 
 class PostLike(View):
@@ -126,7 +97,7 @@ class PostLike(View):
 @login_required
 def create_post(request):
     """
-    Allow an admin user to create a Blog Post
+    Allow an admin or a user to create a Blog Post
     """
     if request.user:
 
@@ -156,40 +127,40 @@ def create_post(request):
     return render(request, template, context)
 
 
+@login_required
+def update_post(request, slug):
+    """
+    Allow all users to edit the blogs they created
+    """
+    if request.user:
 
-# @login_required
-# def edit_blog(request, blog_post_id):
-#     """
-#     Allow all users to edit the blogs they created
-#     """
-#     if request.user:
+        blog_post = get_object_or_404(Post, slug=slug)
 
-#         blog_post = get_object_or_404(Post, pk=blog_post_id)
+        if request.method == 'POST':
+            form = BlogPostForm(
+                request.POST, request.FILES, instance=blog_post)
+            if form.is_valid():
+                form.save()
+                messages.success(request, 'Blog post updated successfully!')
+                return redirect('home')
+            else:
+                messages.error(request, 'Please check the form for errors. \
+                    Blog post failed to update.')
+        else:
+            form = BlogPostForm(instance=blog_post)
+            messages.info(request, f'Editing {blog_post.title}')
+    else:
+        messages.error(request, 'Sorry, you do not have permission for that.')
+        return redirect(reverse('home'))
 
-#         if request.method == 'POST':
-#             form = PostForm(request.POST, request.FILES, instance=blog_post)
-#             if form.is_valid():
-#                 form.save()
-#                 messages.success(request, 'Blog post updated successfully!')
-#                 return redirect('blog')
-#             else:
-#                 messages.error(request, 'Please check the form for errors. \
-#                     Blog post failed to update.')
-#         else:
-#             form = PostForm(instance=blog_post)
-#             messages.info(request, f'Editing {blog_post.title}')
-#     else:
-#         messages.error(request, 'Sorry, you do not have permission for that.')
-#         return redirect(reverse('home'))
+    template = 'update_post.html'
 
-#     template = 'edit_blog.html'
+    context = {
+        'form': form,
+        'blog_post': blog_post,
+    }
 
-#     context = {
-#         'form': form,
-#         'blog_post': blog_post,
-#     }
-
-#     return render(request, template, context)
+    return render(request, template, context)
 
 
 @login_required
