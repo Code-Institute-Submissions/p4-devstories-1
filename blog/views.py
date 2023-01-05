@@ -12,6 +12,7 @@ from .models import Post, Comment
 from .forms import CommentForm, BlogPostForm
 from django.contrib import messages
 from django.core.mail import send_mail, BadHeaderError
+from .forms import NewsletterForm
 
 
 class PostList(ListView):
@@ -173,4 +174,17 @@ def delete_post(request, blog_post_id):
         return render(request, 'delete_blog.html')
     messages.success(request, 'The blog has been deleted successfully!')
 
+    return redirect('/')
+
+
+def subscribe(request):
+    """ Part of custom model """
+    form = NewsletterForm(request.POST)
+    if form.is_valid():
+        form = form.save(commit=False)
+        if request.user.is_authenticated:
+            form.user_id = request.user
+        else: 
+            form.user_id = None
+        form.save()
     return redirect('/')
