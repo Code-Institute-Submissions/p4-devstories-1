@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django_summernote.admin import SummernoteModelAdmin
 from .models import Post, Comment
+from .models import Newsletter
 
 # Register your models here.
 
@@ -24,3 +25,16 @@ class CommentAdmin(admin.ModelAdmin):
 
     def disable_comments(self, request, queryset):
         queryset.update(approved=False)
+
+
+class NewsletterAdmin(admin.ModelAdmin):
+    readonly_fields = ('email', 'date', 'user_id')
+
+    fields = ('date', 'email', 'user_id')
+
+    list_display = ('email', 'date', 'user_id')
+
+    ordering = ('-date',)
+
+
+admin.site.register(Newsletter, NewsletterAdmin)
