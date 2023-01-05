@@ -45,7 +45,7 @@
                 <div id="div_id_featured_image" class="form-group">
                   {{ form.featured_image.label_tag }}
                   <div> <input type="file" name="featured_image" class="clearablefileinput form-control-file"
-                      id="id_featured_image"> </div>
+                    value="{{ blog_post.featured_image }}" id="id_featured_image"> </div>
                   {% if form.featured_image.errors %}
                   <div class="invalid-feedback">{{ form.featured_image.errors }}</div>
                   {% endif %}
@@ -60,7 +60,6 @@
                     <button class="btn btn-primary mb-2" type="submit">Update Post</button>
                   </div>
       </form>
-
     </div>
   </div>
 </div>
