@@ -1,6 +1,7 @@
 from .models import Comment, Post
 from django.utils.translation import gettext_lazy as _
 from django import forms
+from .models import Newsletter
 
 
 class CommentForm(forms.ModelForm):
@@ -19,3 +20,24 @@ class BlogPostForm(forms.ModelForm):
         lables = {
             'title': _(''), 'slug': _(''), 'content': _(''), 'featured_image': _(''), 'excerpt': (''),
         }
+
+
+# Part of the custom model forms part
+class NewsletterForm(forms.ModelForm):
+    class Meta:
+        model = Newsletter
+        fields = ['email',] 
+    
+    def __init__(self, *args, **kwargs):
+        """
+        Add placeholders and classes, remove auto-generated
+        labels and set autofocus on first field
+        """
+        super().__init__(*args, **kwargs)
+        placeholders = {
+            'email': 'Email',
+        }
+
+        for field in self.fields:
+            self.fields[field].widget.attrs['class'] = 'border-black rounded-0'
+            self.fields[field].label = False
