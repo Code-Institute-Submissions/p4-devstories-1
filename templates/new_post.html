@@ -58,7 +58,13 @@
                     <button class="btn btn-primary mb-2" type="submit">Create New Post</button>
                   </div>
       </form>
-
+      <form class="container w-25" action="{% url 'editemail' %}" method="POST" id="profile-update-form">
+        {% csrf_token %}
+        <input  type="email" name="email" maxlength="254" placeholder="update your email here"class="border-black rounded-0 emailinput form-control" required id="id_email">
+        <div class="d-flex justify-content-center py-3">
+        <button class="btn rounded-0 text-uppercase float-right">Update or Change your Email Newsletter</button>
+        </div>
+      </form>
     </div>
   </div>
 </div>
