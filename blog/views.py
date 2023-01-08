@@ -7,8 +7,9 @@ from django.views.generic import (
 from django.urls import reverse_lazy
 from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 from django.template import loader
-from .models import Post, Comment
+from .models import Post, Comment, Newsletter
 from .forms import CommentForm, BlogPostForm
 from django.contrib import messages
 from django.core.mail import send_mail, BadHeaderError
@@ -178,13 +179,47 @@ def delete_post(request, blog_post_id):
 
 
 def subscribe(request):
-    """ Part of custom model """
+    """ A user or guest can subscribe for updates """
     form = NewsletterForm(request.POST)
     if form.is_valid():
         form = form.save(commit=False)
         if request.user.is_authenticated:
             form.user_id = request.user
-        else: 
+        else:
             form.user_id = None
         form.save()
     return redirect('/')
+
+
+def unsubscribe(request):
+    """ A user or guest can ubsubscribe / delete their emial from updates """
+    form = NewsletterForm(request.POST)
+    if request.user.is_authenticated:
+        newsletter = Newsletter.objects.get(user_id=request.user)
+        newsletter.delete()
+    else:
+        if form.is_valid():
+            print(form.cleaned_data['email'])
+            newsletter = Newsletter.objects.get(email=form.cleaned_data['email'])
+            newsletter.delete()
+    return HttpResponseRedirect(reverse('home'))
+
+
+def editemail(request):
+    """ Allows a user to update their newsletter email if logged in """
+    form = NewsletterForm(request.POST)
+    if request.user.is_authenticated:
+        newsletter = Newsletter.objects.get(user_id=request.user)
+        newsletter.email = ''
+        newsletter.save()
+        send_mail(
+            'Subject here', 
+            'Here is the message.', 
+            'from@example.com', 
+            [''], 
+            fail_silently=False, 
+        )
+        return redirect('create_post')
+    
+
+
