@@ -12,4 +12,6 @@ urlpatterns = [
          views.delete_post, name='delete_post'),
     path('blog/<slug:slug>/update/', views.update_post, name='update_post'),
     path('newsletter/subscribe', views.subscribe, name='subscribe'),
+    path('newsletter/unsubscribe', views.unsubscribe, name='unsubscribe'),
+    path('newsletter/update', views.editemail, name='editemail'),
 ]
