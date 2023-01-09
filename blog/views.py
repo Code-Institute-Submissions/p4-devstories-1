@@ -209,13 +209,13 @@ def editemail(request):
     form = NewsletterForm(request.POST)
     if request.user.is_authenticated:
         newsletter = Newsletter.objects.get(user_id=request.user)
-        newsletter.email = 'new_email@example.com'
+        newsletter.email = form.data["email"]
         newsletter.save()
         send_mail(
             'Subject here', 
             'Here is the message.', 
             'from@example.com', 
-            ['email'], 
+            [form.data["email"]],
             fail_silently=False, 
         )
         return redirect('create_post')
