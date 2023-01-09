@@ -85,7 +85,21 @@ For this project I wanted to make a blog site for developers where developers ca
 
     ![brave_lJG0XpQjQW](https://user-images.githubusercontent.com/43074374/211254730-7aba70b1-5b9f-4c17-b241-10cdf880632e.png)
 
-### Frameworks, Libraries & Programs Used
+* # Wireframes
+
+    ## Home Page
+    ![brave_jcHe22KHLj](https://user-images.githubusercontent.com/43074374/211255744-f8c4ebb7-e51f-433e-af3f-04058ba0f00d.png)
+
+    - #### Register Page
+
+
+    - #### Login Page
+
+
+    - #### 
+
+
+### Frameworks, 
 
 1. [Bootstrap 4.4.1:](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
     - Bootstrap was used to assist with the responsiveness and styling of the website.
@@ -99,9 +113,9 @@ For this project I wanted to make a blog site for developers where developers ca
     - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
 6. [GitHub:](https://github.com/)
     - GitHub is used to store the projects code after being pushed from Git.
-7. [Unsplash:]()
+7. [Unsplash:](https://unsplash.com/)
     - Unsplash was used for some of the pictures on the blog site by typing in tech in to the search bar.
-8. [pixabay]()
+8. [pixabay:](https://pixabay.com/)
     - pixabay was used for some of the pictures for testing posting a blog on the site
 8. [Balsamiq:](https://balsamiq.com/)
     - Balsamiq was used to create the [wireframes](https://github.com/) during the design process.
@@ -118,44 +132,70 @@ In this section, I will go over each of the sections on the website such as the 
 
 - __Navigation Bar__
 
-  - Featured on all three pages, the full responsive navigation bar includes links to the Logo, Home page, Gallery and Sign Up page and is identical in each page to allow for easy navigation.
+  - Featured on all three pages, the full responsive navigation bar includes links to the Logo, Home page, Gallery and Sign Up page and is identical in each page to allow for easy navigation. There is a a section for the hero image on the home page 
   - This section will allow the user to easily navigate from page to page across all devices without having to revert back to the previous page via the ‘back’ button. 
+
+  ![brave_YfqWx37BFN](https://user-images.githubusercontent.com/43074374/211256422-f7086594-6198-4895-8ddf-a18880582449.png)
+
 
 - __The Main Page Content__
 
-  - Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, labore asperiores quisquam corporis repudiandae autem similique animi dolores perspiciatis iste quia, dolorem quis voluptatum atque beatae obcaecati, eligendi laborum quo quae sint. 
-  - This section introduces the user to
+  - This is the main pages content where it displayes the hero image and all the blogs desplayed on the website.
+
+  ![brave_WUOTMPgve8](https://user-images.githubusercontent.com/43074374/211256664-01937311-17cb-4968-a2bf-ab66cb046198.png)
+
 
 - __Blog Page__
 
-  - The club ethos section will allow the user to see the benefits of joining the Love Running meetups, as well as the benefits of running overall. 
-  - This user will see the value of signing up for the Love Running meetups. This should encourage the user to consider running as their form of exercise.
+  - The blog page Is the New post page this is only accessible after a user has logged in as you can see in the navigation bar the login and register links change to new post and log out.
+
+  ![brave_qG3jHiBGxY](https://user-images.githubusercontent.com/43074374/211256967-197dc39e-80bd-4fdb-a816-75fe83a929a0.png)
+
+  - You can also see here on the same page the rest of the form where the user can create a blog post there is also the option for the user to update their email for the newsletter at the bottom of the page.
+
+  ![brave_40QV9HxHhj](https://user-images.githubusercontent.com/43074374/211257162-c906a62c-0aaf-4387-bc3d-be7619d12c9d.png)
 
 - __Detailed Blog Page__
 
-  - The club ethos section will allow the user to see the benefits of joining the Love Running meetups, as well as the benefits of running overall. 
-  - This user will see the value of signing up for the Love Running meetups. This should encourage the user to consider running as their form of exercise.
+  - The Detailed blog page is where vistors who arent signed up can read more about a blog but if a user is signed up only that user who created the blog will have the option of updating or deleting the post. Also once the user logged in they will have the option for 
+ 
+  - The view for when a visitor wants to see the detailed version.
+
+  ![brave_KlwnpXzesB](https://user-images.githubusercontent.com/43074374/211257531-d7a72d97-1f5d-43cf-a860-4441cfc1e1c4.png)
+
+  - The View for when a user is logged in these are the options they have for their post.
+
+  ![brave_RfO5atov6M](https://user-images.githubusercontent.com/43074374/211257731-473fec77-6292-4a02-a774-b94a9165d596.png)
+
+  - This is what it looks like for the user when they want to post a comment on a post once they are logged in.
+
+  ![brave_DP7UqE5E4N](https://user-images.githubusercontent.com/43074374/211257993-3be67ced-d0c4-485f-952d-500727b4b3e8.png)
+
+- __Blog Features__
+
+  - This feature is for when a user likes a blog post the counter increments by one for every like
+
+  ![brave_G5hfmKEwD0](https://user-images.githubusercontent.com/43074374/211258653-8101f574-ee3b-4ebb-84a5-adddef985b15.png)
 
 - __The Footer__ 
 
-  - The footer section includes links to the relevant social media sites for Love Running. The links will open to a new tab to allow easy navigation for the user. 
-  - The footer is valuable to the user as it encourages them to keep connected via social media
+  - The footer of the website just consists of the name and some text and the copyright symbol.
+
+  ![brave_rAkqWvm4Es](https://user-images.githubusercontent.com/43074374/211258321-d758e07d-35fc-429f-86d8-3749f87041c1.png)
+
 
 - __The Sign Up Page__
 
-  - This page will allow the user to get signed up to Love Running to start their running journey with the community. The user will be able specify if they would like to take part in road, trail or both types of running. The user will be asked to submit their full name and email address.
+  - The Sign up page consists of the navigation and hero image and a form which will allow you to create an account on the website
+
+  
 
 - __The login Page__
 
-  - This page will allow the user to get signed up to Love Running to start their running journey with the community. The user will be able specify if they would like to take part in road, trail or both types of running. The user will be asked to submit their full name and email address. 
+  - The Sign in or login page consists of the navigation and hero image and a form you can fill out to login to your account
+  
+  ![brave_bTzsjG3kyU](https://user-images.githubusercontent.com/43074374/211261359-65eca6ce-306e-42a4-96c1-5d0659294246.png)
 
-For some/all of your features, you may choose to reference the specific project files that implement them.
-
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
-
-### Features Left to Implement
-
-- Another feature idea
 
 ## Testing 
 
