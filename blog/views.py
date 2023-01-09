@@ -199,7 +199,6 @@ def unsubscribe(request):
         newsletter.delete()
     else:
         if form.is_valid():
-            print(form.cleaned_data['email'])
             newsletter = Newsletter.objects.get(email=form.cleaned_data['email'])
             newsletter.delete()
     return HttpResponseRedirect(reverse('home'))
@@ -210,13 +209,13 @@ def editemail(request):
     form = NewsletterForm(request.POST)
     if request.user.is_authenticated:
         newsletter = Newsletter.objects.get(user_id=request.user)
-        newsletter.email = ''
+        newsletter.email = 'new_email@example.com'
         newsletter.save()
         send_mail(
             'Subject here', 
             'Here is the message.', 
             'from@example.com', 
-            [''], 
+            ['email'], 
             fail_silently=False, 
         )
         return redirect('create_post')
