@@ -96,7 +96,7 @@ For this project I wanted to make a blog site for developers where developers ca
 
     ![brave_NQ0fJRyE7X](https://user-images.githubusercontent.com/43074374/211285283-07ffe0a2-0214-45b2-8242-af1c844b7cfa.png)
 
-### Frameworks, 
+### Frameworks, Tech Used
 
 1. [Bootstrap 4.4.1:](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
     - Bootstrap was used to assist with the responsiveness and styling of the website.
@@ -112,8 +112,10 @@ For this project I wanted to make a blog site for developers where developers ca
     - Unsplash was used for some of the pictures on the blog site by typing in tech in to the search bar.
 8. [pixabay:](https://pixabay.com/)
     - pixabay was used for some of the pictures for testing posting a blog on the site
-8. [Balsamiq:](https://balsamiq.com/)
+9. [Balsamiq:](https://balsamiq.com/)
     - Balsamiq was used to create the [wireframes](https://github.com/) during the design process.
+10. [Cloudinary:](https://cloudinary.com/)
+    - Cloudinary was used to store the images that go on the website
 
 ## Features 
 
@@ -194,9 +196,6 @@ In this section, I will go over each of the sections on the website such as the 
 
 ## Testing 
 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your project’s features and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
-
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
 ### Browser Testing 
 
 - Browsers test on
@@ -235,15 +234,10 @@ Comments seem to duplicate when you refresh after posting a comment
 
 ### GitHub
 
-The project was deployed to GitHub Pages using the following steps...
+The projects code was stored on github
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
-2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
-    - Alternatively Click [Here](https://raw.githubusercontent.com/) for a GIF demonstrating the process starting from Step 2.
-3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
-4. Under "Source", click the dropdown called "None" and select "Master Branch".
-5. The page will automatically refresh.
-6. Scroll back down through the page to locate the now published site [link](https://github.com) in the "GitHub Pages" section.
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/owenbcoding/p4-devstories)
+
 
 ### Forking the GitHub Repository
 
@@ -255,7 +249,7 @@ By forking the GitHub Repository we make a copy of the original repository on ou
 
 ### Making a Local Clone
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/owenbcoding/p4-devstories)
 2. Under the repository name, click "Clone or download".
 3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
 4. Open Git Bash
@@ -263,13 +257,13 @@ By forking the GitHub Repository we make a copy of the original repository on ou
 6. Type `git clone`, and then paste the URL you copied in Step 3.
 
 ```
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+$ git clone https://github.com/owenbcoding/p4-devstories
 ```
 
 7. Press Enter. Your local clone will be created.
 
 ```
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+$ git clone https://github.com/owenbcoding/p4-devstories
 > Cloning into `CI-Clone`...
 > remote: Counting objects: 10, done.
 > remote: Compressing objects: 100% (8/8), done.
