@@ -1,4 +1,3 @@
-# Devstories
 <h1 align="center">Devstories</h1>
 
 [View the live project here.]()
@@ -13,40 +12,70 @@ For this project I wanted to make a blog site for developers where developers ca
 
     -   #### First Time Visitor Goals
 
-        1. As a First Time Visitor, You will be able to sign up and and login.
-        2. As a First Time Visitor, You will be able to navigate the site with minimal effort and ease.
-        3. As a First Time Visitor, You will be able to view a list of current blog posts posted.
-        3. As a First Time Visitor, You will be able to create a blog.
-        3. As a First Time Visitor, You will be able to update a blog.
-        3. As a First Time Visitor, You will be able to delete your blog.
+        1. As a First Time Visitor, You will be able to navigate the site with minimal effort and ease.
+        2. As a First Time Visitor, You will be able to view a list of current blog posts posted.
+        3. As a First Time Visitor, You will be able to sign up and and login.
 
     -   #### Returning Visitor Goals
 
         1. As a Returning Visitor, you will be able to find new or old blog posts that are on the site.
-        2. As a Returning Visitor, you will be able to contact the website owner via email if you have any questions.
+        2. As a Returning Visitor, You will be able to create a blog.
+        3. As a Returning Vistor, You will be able to update a blog.
+        4. As a Returning Vistor, You will be able to delete your blog.
 
     -   #### Frequent User Goals
-        1. As a Frequent User, You will be to check to see if your blog post got more likes than before.
+        1. As a Frequent User, You will be to check to see your likes and comments on your blog.
         2. As a Frequent User, You will be to check to see if there are any new blog posts.
-        3. As a Frequent User, You will be able to sign up to the Newsletter so that I am emailed any major updates and/or changes to the website or organisation.
-        4. As a Frequent User, You will be able to see if someone has commented on your post.
+        3. As a Frequent User, You will be able to sign up to a Newsletter
+    
+    - ### Admin user stories
+        1. As a supersuer you will be able to see a list of users who registered on the site
+        2. As a supersuer you will be able to remove any users registered on the site
+        3. As a supersuer you will be able to manage content such as blogs that users post
+        4. As a supersuer you will be able to see who signs up for the newletter
+        5. As a supersuer you will be able to manage people comments users post
 
--   ### Design
-    -   #### Colour Scheme
-        -   The two main colours used are white, and gray / black.
-    -   #### Typography
-        -   The Montserrat font is the main font used throughout the whole website with Sans Serif as the fallback font in case for any reason the font isn't being imported into the site correctly. Montserrat is a clean font used frequently in programming, so it is both attractive and appropriate.
-    -   #### Imagery
+-   ## Target Audience
+    - 
+
+-   ## Technical design
+    - ### Agile design
+    - An Agile approach to creating this app has been applied. Githubs projects was used to track user stories and implement ideas based on their level of importance for allowing use of the app with no loss of functionality or user experience.
+
+    - By taking using AGILE methodology in this project i was able to deliver a site which had all required functionality and some more. Due to the time limit on this project i was not able to incorporate all intial listed features, but this is where an AGILE approach is great for app design. The project displays this by having User stories in the Done section and the ones which decided to be left for future put in the future implementation.
+
+    - ### Crud Functionality
+    - Devstories handles data with full CRUD Functionality:
+    - Create - User can create, account, profile, post, comment, like 
+    - Read - Users can view the posts of other users 
+    - Update - Users can update their blog posts with new context
+    - Delete - Users can delete their own blog posts 
+
+
+-   ### Colours
+     -   The three main colours used are white, and gray / black.
+    
+-   #### Typography
+        -   The Lato, sans-serif is the main font used throughout the whole website with Sans Serif as the fallback font in case for any reason the font isn't being imported into the site correctly. Lato, sans-serif is a clean font used frequently in programming, so it is both attractive and appropriate.
+
+-   #### Imagery
         -   Imagery is important. The images are set up form the users when they create a blog on the site they can choose to add an image to make their blog stand out more.
 
-# Agile Development
-*   ### Wireframes
+# Structure
 
-    -   Home Page Wireframe:
+*   ### Database
+    - The site uses a backend database built with the Django framework and the use of ElephantSQL Postgres for the deployed site.
 
-    -   Mobile Wireframe:
+*   ### Web pages
+    - User experience was one of the main driving factors in this project. A simple, clear and easy to navigate app was the desired outcome. 
 
-    -   Contact Us Page Wireframe:
+    - Home Page: 
+
+    - New Post page:
+
+    - Register Page:
+    
+    - Login Page:
   
 * ### Github - User Project Kanban Board
     - During development I used the project kanban board in github for keeping track of the progress during development for the site.
@@ -68,15 +97,17 @@ For this project I wanted to make a blog site for developers where developers ca
     - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
 6. [GitHub:](https://github.com/)
     - GitHub is used to store the projects code after being pushed from Git.
-7. [Photoshop:](https://www.adobe.com/ie/products/photoshop.html)
-    - Photoshop was used to create the logo, resizing images and editing photos for the website.
+7. [Unsplash:]()
+    - Unsplash was used for some of the pictures on the blog site by typing in tech in to the search bar.
+8. [pixabay]()
+    - pixabay was used for some of the pictures for testing posting a blog on the site
 8. [Balsamiq:](https://balsamiq.com/)
     - Balsamiq was used to create the [wireframes](https://github.com/) during the design process.
 
 ## Features 
 
 - I aimed to achive a nice easy to navigate site with minimal effort
-- I aimed the site to be driven more towards developers who wish to blog
+- I aimed the site to be driven more towards developers who wish to blog and talk about their projects
 - I aimed to bring in more people and people who are new to tech and want to learn more.
 
 In this section, I will go over each of the sections on the website such as the Navigation Bar, Main Page, Blog page, Footer section, admin 
