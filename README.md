@@ -1,10 +1,12 @@
 <h1 align="center">Devstories</h1>
 
-[View the live project here.]()
+[View the live project here.](https://app-devstories.herokuapp.com/)
 
 Devstories is a blog site for devevelopers to share their knowladge and projects that they are working describing how they made them but not going into too much detail but just a brief explination of their project. Its also a place were friends of developers can visit and see what their next project is that they are working on etc.
 
 For this project I wanted to make a blog site for developers where developers can sign up and make a blog about their own projects or anything related to tech my target audience is mainly developers or friends who are developers or looking for inspiration about new tech news or keeping in touch with developer friends and their progress.
+
+![brave_YwaIpAOxEY](https://user-images.githubusercontent.com/43074374/211291446-dc8cd42c-90f5-4cb2-ae7b-95dbf02e0ae8.png)
 
 ## User Experience
 
@@ -46,8 +48,8 @@ For this project I wanted to make a blog site for developers where developers ca
 
     - ### Crud Functionality
     - Devstories handles data with full CRUD Functionality:
-    - Create - Users can create, account, profile, post, comment, like 
-    - Read - Users can view the posts of other users 
+    - Create - Users can create, account, profile, post a blog
+    - Read - Users can view the posts of other users and their own.
     - Update - Users can update their blog posts with new context
     - Delete - Users can delete their own blog posts 
 
@@ -90,21 +92,14 @@ For this project I wanted to make a blog site for developers where developers ca
     ## Home Page
     ![brave_jcHe22KHLj](https://user-images.githubusercontent.com/43074374/211255744-f8c4ebb7-e51f-433e-af3f-04058ba0f00d.png)
 
-    - #### Register Page
+    ## Blog detail page
 
-
-    - #### Login Page
-
-
-    - #### 
-
+    ![brave_NQ0fJRyE7X](https://user-images.githubusercontent.com/43074374/211285283-07ffe0a2-0214-45b2-8242-af1c844b7cfa.png)
 
 ### Frameworks, 
 
 1. [Bootstrap 4.4.1:](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
     - Bootstrap was used to assist with the responsiveness and styling of the website.
-2. [Hover.css:](https://ianlunn.github.io/Hover/)
-    - Hover.css was used on the Social Media icons in the footer to add the float transition while being hovered over.
 3. [Google Fonts:](https://fonts.google.com/)
     - Google fonts were used to import the 'Titillium Web' font into the style.css file which is used on all pages throughout the project.
 4. [Font Awesome:](https://fontawesome.com/)
@@ -188,7 +183,7 @@ In this section, I will go over each of the sections on the website such as the 
 
   - The Sign up page consists of the navigation and hero image and a form which will allow you to create an account on the website
 
-  
+  ![chrome_CCIFOrv7NZ](https://user-images.githubusercontent.com/43074374/211267618-92a90555-1c06-4559-a0b9-122858c77590.png)
 
 - __The login Page__
 
@@ -202,91 +197,42 @@ In this section, I will go over each of the sections on the website such as the 
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your project’s features and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
 In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
-### Validator Testing 
+### Browser Testing 
 
 - Browsers test on
-    - Chrome
-    - Firefox
-    - Brave 
-
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
-
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
+    - Chrome : Tested it on chrome everything seemed to be working fine 
+    - Firefox : Tested it on firefox everything seemed to be working fine 
+    - Brave : Test it on Brave everything seemed to be working fine
 
 
 ### Validator Testing 
 
 - HTML
-  - No errors were returned when passing through the official 
+  - I ran the site through the html validator and it came back with some errors
+
+  ![brave_DhsQ1R0mDa](https://user-images.githubusercontent.com/43074374/211269954-61cb3ad6-4804-4804-ae1d-e864b13966bb.png)
+
 - CSS
-  - No errors were found when passing through the official
+  - I ran the site through the css validator and it came back with some errors 
 
-### Testing User Stories from User Experience (UX) Section
-
--   #### First Time Visitor Goals
-
-    1. As a First Time Visitor, I want to easily understand the main purpose of the site and learn more about the organisation.
-
-        1. Upon entering the site, users are automatically greeted with a clean and easily readable navigation bar to go to the page of their choice. Underneath there is a Hero Image with Text and a "Learn More" Call to action button.
-        2. The main points are made immediately with the hero image
-        3. The user has two options, click the call to action buttons or scroll down, both of which will lead to the same place, to learn more about the organisation.
-
-    2. As a First Time Visitor, I want to be able to easily be able to navigate throughout the site to find content.
-
-        1. The site has been designed to be fluid and never to entrap the user. At the top of each page there is a clean navigation bar, each link describes what the page they will end up at clearly.
-        2. At the bottom of the first 3 pages there is a redirection call to action to ensure the user always has somewhere to go and doesn't feel trapped as they get to the bottom of the page.
-        3. On the Contact Us Page, after a form response is submitted, the page refreshes and the user is brought to the top of the page where the navigation bar is.
-
-    3. As a First Time Visitor, I want to look for testimonials to understand what their users think of them and see if they are trusted. I also want to locate their social media links to see their following on social media to determine how trusted and known they are.
-        1. Once the new visitor has read the About Us and What We Do text, they will notice the Why We are Loved So Much section.
-        2. The user can also scroll to the bottom of any page on the site to locate social media links in the footer.
-        3. At the bottom of the Contact Us page, the user is told underneath the form, that alternatively they can contact the organisation on social media which highlights the links to them.
-
--   #### Returning Visitor Goals
-
-    1. As a Returning Visitor, I want to find the new programming challenges or hackathons.
-
-        1. These are clearly shown in the banner message.
-        2. They will be directed to a page with another hero image and call to action.
-
-    2. As a Returning Visitor, I want to find the best way to get in contact with the organisation with any questions I may have.
-
-        1. The navigation bar clearly highlights the "Contact Us" Page.
-        2. Here they can fill out the form on the page or are told that alternatively they can message the organisation on social media.
-        3. The footer contains links to the organisations Facebook, Twitter and Instagram page as well as the organization's email.
-        4. Whichever link they click, it will be open up in a new tab to ensure the user can easily get back to the website.
-        5. The email button is set up to automatically open up your email app and autofill there email address in the "To" section.
-
-    3. As a Returning Visitor, I want to find the Facebook Group link so that I can join and interact with others in the community.
-        1. The Facebook Page can be found at the footer of every page and will open a new tab for the user and more information can be found on the Facebook page.
-        2. Alternatively, the user can scroll to the bottom of the Home page to find the Facebook Group redirect card and can easily join by clicking the "Join Now!" button which like any external link, will open in a new tab to ensure they can get back to the website easily.
-        3. If the user is on the "Our Favourites" page they will also be greeted with a call to action button to invite the user to the Facebook group. The user is incentivized as they are told there is a weekly favourite product posted in the group.
-
--   #### Frequent User Goals
-
-    1. As a Frequent User, I want to check to see if there are any newly added challenges or hackathons.
-
-        1. The user would already be comfortable with the website layout and can easily click the banner message.
-
-    2. As a Frequent User, I want to check to see if there are any new blog posts.
-
-        1. The user would already be comfortable with the website layout and can easily click the blog link
-
-    3. As a Frequent User, I want to sign up to the Newsletter so that I am emailed any major updates and/or changes to the website or organisation.
-        1. At the bottom of every page their is a footer which content is consistent throughout all pages.
-        2. To the right hand side of the footer the user can see "Subscribe to our Newsletter" and are prompted to Enter their email address.
-        3. There is a "Submit" button to the right hand side of the input field which is located close to the field and can easily be distinguished.
+  ![brave_1wU1wPhVoa](https://user-images.githubusercontent.com/43074374/211271678-d23a5661-c4ac-4e1f-8b2b-b8e1aa35bd37.png)
+  
 
 ### Further Testing
-
+-   There seemd to be some issues with the mobile responsivenes
+-   There was also some issues regarding the navigtion bar not being responsive needs fixing
 -   The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
--   The website was viewed on a variety of devices such as Desktop, Laptop, iPhone7, iPhone 8 & iPhoneX.
--   A large amount of testing was done to ensure that all pages were linking correctly.
 -   Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
 
-### Unfixed Bugs
+## Unfixed Bugs
 
-You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed. 
+Some bugs have come up during development one is the comments and the other is updating your newsletter email 
+
+### Bug Number 1 
+Comments seem to duplicate when you refresh after posting a comment
+
+### Bug Number 2
+The edit email for the news letter part does not seem to update 
 
 ## Deployment
 
@@ -306,7 +252,7 @@ The project was deployed to GitHub Pages using the following steps...
 
 By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/owenbcoding/p4-devstories)
 2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
 3. You should now have a copy of the original repository in your GitHub account.
 
@@ -336,39 +282,32 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 
 Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
 
+## Heroku And Elephant SQL
 
-## Credits 
+### For hosting 
+  - Start by creating your database on elephantSQL then make sure its set up correctly with the proper settings
+  
+    ![brave_ENEKcAzdhN](https://user-images.githubusercontent.com/43074374/211292027-be8ad86a-69bf-47aa-9a09-604ebea31edb.png)
 
-- Credit to
- - Code institute for project and read me template 
- - Unsplash for free nice images for blog posts https://unsplash.com/s/photos/study
- - Pixabay for free images for blog posts https://pixabay.com/images/search/tech/?manual_search=1 
 
-You can break the credits section up into Content and Media, depending on what you have included in your project. 
+  - Next go to heroku and make and connect your github repo to the app you made in heroku 
+    
+    ![brave_zIhDJlSFfG](https://user-images.githubusercontent.com/43074374/211292159-d6bbb5cc-4c6f-4c6d-8feb-24d5c1496227.png)
+
 
 ### Content 
 
-- The text for the Home page was taken from Wikipedia Article A
-- Instructions on how to implement form validation on the Sign Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
+- The Hero image for the home page was take from unplash by searching tech in the search bar
 - The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
 
 ### Media
 
 - The photos used are from these two free image sites Unplash and Pixabay
 
-## Other General Project Advice
+## Credits 
 
-Below you will find a couple of extra tips that may be helpful when completing your project. Remember that each of these projects will become part of your final portfolio so it’s important to allow enough time to showcase your best work! 
+- Credit to
+ - Code institute for project and read me template 
+ - Unsplash for free nice images for blog posts https://unsplash.com/s/photos/study
+ - Pixabay for free images for blog posts https://pixabay.com/images/search/tech/?manual_search=1
 
-- One of the most basic elements of keeping a healthy commit history is with the commit message. When getting started with your project, read through [this article](https://chris.beams.io/posts/git-commit/) by Chris Beams on How to Write  a Git Commit Message 
-  - Make sure to keep the messages in the imperative mood 
-
-- When naming the files in your project directory, make sure to consider meaningful naming of files, point to specific names and sections of content.
-  - For example, instead of naming an image used ‘image1.png’ consider naming it ‘landing_page_img.png’. This will ensure that there are clear file paths kept. 
-
-- Do some extra research on good and bad coding practices, there are a handful of useful articles to read, consider reviewing the following list when getting started:
-  - [Writing Your Best Code](https://learn.shayhowe.com/html-css/writing-your-best-code/)
-  - [HTML & CSS Coding Best Practices](https://medium.com/@inceptiondj.info/html-css-coding-best-practice-fadb9870a00f)
-  - [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html#General)
-
-Getting started with your Portfolio Projects can be daunting, planning your project can make it a lot easier to tackle, take small steps to reach the final outcome and enjoy the process! 
