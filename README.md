@@ -6,7 +6,7 @@ Devstories is a blog site for devevelopers to share their knowladge and projects
 
 For this project I wanted to make a blog site for developers where developers can sign up and make a blog about their own projects or anything related to tech my target audience is mainly developers or friends who are developers or looking for inspiration about new tech news or keeping in touch with developer friends and their progress.
 
-## User Experience (UX)
+## User Experience
 
 -   ### User stories
 
@@ -36,17 +36,17 @@ For this project I wanted to make a blog site for developers where developers ca
         5. As a supersuer you will be able to manage people comments users post
 
 -   ## Target Audience
-    - 
+    - The target audience for the website was for developers who like to blog about or talk about their projects
 
 -   ## Technical design
     - ### Agile design
     - An Agile approach to creating this app has been applied. Githubs projects was used to track user stories and implement ideas based on their level of importance for allowing use of the app with no loss of functionality or user experience.
 
-    - By taking using AGILE methodology in this project i was able to deliver a site which had all required functionality and some more. Due to the time limit on this project i was not able to incorporate all intial listed features, but this is where an AGILE approach is great for app design. The project displays this by having User stories in the Done section and the ones which decided to be left for future put in the future implementation.
+    - By taking using AGILE methodology in this project i was able to deliver a site which had all required functionality. Due to the time limit on this project i was not able to incorporate all intial listed features, but this is where an AGILE approach is great for app design. The project displays this by having User stories in the Done section and the ones which decided to be left for future put in the future implementation.
 
     - ### Crud Functionality
     - Devstories handles data with full CRUD Functionality:
-    - Create - User can create, account, profile, post, comment, like 
+    - Create - Users can create, account, profile, post, comment, like 
     - Read - Users can view the posts of other users 
     - Update - Users can update their blog posts with new context
     - Delete - Users can delete their own blog posts 
@@ -69,19 +69,21 @@ For this project I wanted to make a blog site for developers where developers ca
 *   ### Web pages
     - User experience was one of the main driving factors in this project. A simple, clear and easy to navigate app was the desired outcome. 
 
-    - Home Page: 
+    - Home Page: The home page conists of a navigation bar with the name of the site and site links it will also show you the hero image for the site which is a picture I got from unsplash
 
-    - New Post page:
+    - New Post page: The new post page is basically the users profile page with a blog post form which the user can fill out to post a blog to the home page and ther is also a upate email for the news letter
 
-    - Register Page:
+    - Register Page: The Register page consists of a sign up form for the user to create a user name and a password for their account
     
-    - Login Page:
+    - Login Page: The Login page consists of a similar form like the register page but this for after the user has created their account
   
 * ### Github - User Project Kanban Board
     - During development I used the project kanban board in github for keeping track of the progress during development for the site.
 
 * ### ERD - Entity Relation Diagram schema
     - (Database Schema Image) Before I started to code this project I created a Diagram Entity Relationship - Database Schema using dbdiagram. I created this to easier understand the database models that I was going to create for this project.
+
+    ![brave_lJG0XpQjQW](https://user-images.githubusercontent.com/43074374/211254730-7aba70b1-5b9f-4c17-b241-10cdf880632e.png)
 
 ### Frameworks, Libraries & Programs Used
 
