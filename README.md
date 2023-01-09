@@ -231,9 +231,6 @@ Some bugs have come up during development one is the comments and the other is u
 ### Bug Number 1 
 Comments seem to duplicate when you refresh after posting a comment
 
-### Bug Number 2
-The edit email for the news letter part does not seem to update 
-
 ## Deployment
 
 ### GitHub
