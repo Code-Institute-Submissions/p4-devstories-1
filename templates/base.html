@@ -24,14 +24,18 @@
     <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
 </head>
 <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-center">
-                <div class="container">
-                    <div class="col">
-                        <a class="navbar-brand text-white" href="{% url 'home' %}"><span class="brand text-white">Dev<span class="red-o text-white">stor</span>ies<span
-                            class="thin"> Dev Blogs | </span></span></span></a>
-                        </div>
-                    <div class="col d-flex justify-content-around">
-                        <ul class="navbar-nav mb-2 mb-lg-0">
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="container">
+                <div class="col">
+                    <a class="navbar-brand text-white" href="{% url 'home' %}"><span class="brand text-white">Dev<span class="red-o text-white">stor</span>ies<span
+                        class="thin"> | Dev Blogs | </span></span></span></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav mr-auto">
                             <li class="nav-item">
                                 <a class="nav-link active text-white" aria-current="page" href="{% url 'home' %}">Home</a>
                             </li>
@@ -58,12 +62,7 @@
                             {% endif %}
                         </ul>
                     </div>
-                    <div class="col" id="navbarText">
-                        <span class="navbar-text text-white">
-                            Blogs by software developers.
-                        </span>
-                    </div>
-                </div>
+        </div>
     </nav>
 </header>
 <body>
