@@ -6,7 +6,6 @@ Devstories is a blog site for devevelopers to share their knowladge and projects
 
 For this project I wanted to make a blog site for developers where developers can sign up and make a blog about their own projects or anything related to tech my target audience is mainly developers or friends who are developers or looking for inspiration about new tech news or keeping in touch with developer friends and their progress.
 
-![brave_YwaIpAOxEY](https://user-images.githubusercontent.com/43074374/211291446-dc8cd42c-90f5-4cb2-ae7b-95dbf02e0ae8.png)
 
 ## User Experience
 
@@ -132,25 +131,16 @@ In this section, I will go over each of the sections on the website such as the 
   - Featured on all three pages, the full responsive navigation bar includes links to the Logo, Home page, Gallery and Sign Up page and is identical in each page to allow for easy navigation. There is a a section for the hero image on the home page 
   - This section will allow the user to easily navigate from page to page across all devices without having to revert back to the previous page via the ‘back’ button. 
 
-  ![brave_YfqWx37BFN](https://user-images.githubusercontent.com/43074374/211256422-f7086594-6198-4895-8ddf-a18880582449.png)
-
-
 - __The Main Page Content__
 
   - This is the main pages content where it displayes the hero image and all the blogs desplayed on the website.
-
-  ![brave_WUOTMPgve8](https://user-images.githubusercontent.com/43074374/211256664-01937311-17cb-4968-a2bf-ab66cb046198.png)
 
 
 - __Blog Page__
 
   - The blog page Is the New post page this is only accessible after a user has logged in as you can see in the navigation bar the login and register links change to new post and log out.
 
-  ![brave_qG3jHiBGxY](https://user-images.githubusercontent.com/43074374/211256967-197dc39e-80bd-4fdb-a816-75fe83a929a0.png)
-
   - You can also see here on the same page the rest of the form where the user can create a blog post there is also the option for the user to update their email for the newsletter at the bottom of the page.
-
-  ![brave_40QV9HxHhj](https://user-images.githubusercontent.com/43074374/211257162-c906a62c-0aaf-4387-bc3d-be7619d12c9d.png)
 
 - __Detailed Blog Page__
 
@@ -158,41 +148,25 @@ In this section, I will go over each of the sections on the website such as the 
  
   - The view for when a visitor wants to see the detailed version.
 
-  ![brave_KlwnpXzesB](https://user-images.githubusercontent.com/43074374/211257531-d7a72d97-1f5d-43cf-a860-4441cfc1e1c4.png)
-
   - The View for when a user is logged in these are the options they have for their post.
 
-  ![brave_RfO5atov6M](https://user-images.githubusercontent.com/43074374/211257731-473fec77-6292-4a02-a774-b94a9165d596.png)
-
   - This is what it looks like for the user when they want to post a comment on a post once they are logged in.
-
-  ![brave_DP7UqE5E4N](https://user-images.githubusercontent.com/43074374/211257993-3be67ced-d0c4-485f-952d-500727b4b3e8.png)
 
 - __Blog Features__
 
   - This feature is for when a user likes a blog post the counter increments by one for every like
 
-  ![brave_G5hfmKEwD0](https://user-images.githubusercontent.com/43074374/211258653-8101f574-ee3b-4ebb-84a5-adddef985b15.png)
-
 - __The Footer__ 
 
   - The footer of the website just consists of the name and some text and the copyright symbol.
-
-  ![brave_rAkqWvm4Es](https://user-images.githubusercontent.com/43074374/211258321-d758e07d-35fc-429f-86d8-3749f87041c1.png)
-
 
 - __The Sign Up Page__
 
   - The Sign up page consists of the navigation and hero image and a form which will allow you to create an account on the website
 
-  ![chrome_CCIFOrv7NZ](https://user-images.githubusercontent.com/43074374/211267618-92a90555-1c06-4559-a0b9-122858c77590.png)
-
 - __The login Page__
 
   - The Sign in or login page consists of the navigation and hero image and a form you can fill out to login to your account
-  
-  ![brave_bTzsjG3kyU](https://user-images.githubusercontent.com/43074374/211261359-65eca6ce-306e-42a4-96c1-5d0659294246.png)
-
 
 ## Testing 
 
@@ -207,15 +181,10 @@ In this section, I will go over each of the sections on the website such as the 
 ### Validator Testing 
 
 - HTML
-  - I ran the site through the html validator and it came back with some errors
-
-  ![brave_DhsQ1R0mDa](https://user-images.githubusercontent.com/43074374/211269954-61cb3ad6-4804-4804-ae1d-e864b13966bb.png)
+  - I ran the site through the html validator
 
 - CSS
-  - I ran the site through the css validator and it came back with some errors 
-
-  ![brave_1wU1wPhVoa](https://user-images.githubusercontent.com/43074374/211271678-d23a5661-c4ac-4e1f-8b2b-b8e1aa35bd37.png)
-  
+  - I ran the site through the css validator  
 
 ### Further Testing
 -   There seemd to be some issues with the mobile responsivenes
@@ -225,10 +194,13 @@ In this section, I will go over each of the sections on the website such as the 
 
 ## Unfixed Bugs
 
-Some bugs have come up during development one is the comments and the other is updating your newsletter email 
+Some bugs have come up during development one is the comments and sending out newsletter email
 
-### Bug Number 1 
+### Bug One Comments
 Comments seem to duplicate when you refresh after posting a comment
+
+### Bug Two Newsletter emails
+I have implemented the custom logic for a user to add their email to the newsletter its just sending out emails for notifications is slighty broken at the url /newsletter/send seems to be loading for a while then gets suck on a 502 error while trying to use send grid I tried using mail gun before but I ran into some issues with their support because I made a mistake in the settings on another project which made them lock my account making it unsuable for this project.
 
 ## Deployment
 
