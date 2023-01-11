@@ -4,6 +4,7 @@ from django.core.mail import send_mail
 from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, redirect, render, reverse
 from django.views.generic import ListView, View
+from django.conf import settings
 
 from .forms import BlogPostForm, CommentForm, NewsletterForm
 from .models import Newsletter, Post
@@ -232,3 +233,13 @@ def editemail(request):
             fail_silently=False,
         )
         return redirect("create_post")
+
+
+def new_email(request):
+    subject = "Thanks for subscribing"
+    message = "Hello world"
+    email_from = settings.EMAIL_HOST_USER
+    recipients = ["eoghankb@gmail.com"]
+
+    send_mail(subject=subject, message=message, from_email=email_from, recipient_list=recipients, fail_silently=False)
+    return redirect("/")
