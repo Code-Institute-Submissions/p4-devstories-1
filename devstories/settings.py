@@ -63,10 +63,10 @@ EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 ACCOUNT_EMAIL_VERIFICATION = "none"
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-EMAIL_HOST = "smtp.mailgun.org"
+EMAIL_HOST = "smtp.sendgrid.net"
 EMAIL_PORT = 587
-EMAIL_HOST_USER = os.environ.get("MAILGUN_HOST_USER")
-EMAIL_HOST_PASSWORD = os.environ.get("MAILGUN_HOST_PASSWORD")
+EMAIL_HOST_USER = os.environ.get("MAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = os.environ.get("MAIL_HOST_PASSWORD")
 EMAIL_USE_TLS = True
 
 MIDDLEWARE = [
@@ -163,7 +163,7 @@ if DEBUG:
     ]
 else:
     STATIC_ROOT = os.path.join(BASE_DIR, "static")
-
+    
 MEDIA_URL = "/media/"
 CLOUDINARY_URL = os.environ.get("CLOUDINARY_URL")
 DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
