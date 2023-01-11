@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django_summernote.admin import SummernoteModelAdmin
-from .models import Post, Comment
-from .models import Newsletter
+
+from .models import Comment, Newsletter, Post
 
 # Register your models here.
 

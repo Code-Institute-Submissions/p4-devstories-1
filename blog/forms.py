@@ -1,7 +1,7 @@
-from .models import Comment, Post
-from django.utils.translation import gettext_lazy as _
 from django import forms
-from .models import Newsletter
+from django.utils.translation import gettext_lazy as _
+
+from .models import Comment, Newsletter, Post
 
 
 class CommentForm(forms.ModelForm):

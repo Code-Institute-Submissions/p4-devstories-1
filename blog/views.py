@@ -1,15 +1,15 @@
-from django.shortcuts import render, get_object_or_404, reverse, redirect
-from django.views.generic import View, ListView, UpdateView, DeleteView
-from django.urls import reverse_lazy
-from django.http import HttpResponseRedirect, HttpResponse
+from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+from django.core.mail import BadHeaderError, send_mail
+from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import get_object_or_404, redirect, render, reverse
 from django.template import loader
-from .models import Post, Comment, Newsletter
-from .forms import CommentForm, BlogPostForm
-from django.contrib import messages
-from django.core.mail import send_mail, BadHeaderError
-from .forms import NewsletterForm
+from django.urls import reverse_lazy
+from django.views.generic import DeleteView, ListView, UpdateView, View
+
+from .forms import BlogPostForm, CommentForm, NewsletterForm
+from .models import Comment, Newsletter, Post
 
 
 class PostList(ListView):
