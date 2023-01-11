@@ -1,9 +1,5 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
-from django.views.generic import (
-    View,
-    ListView,
-    UpdateView,
-    DeleteView)
+from django.views.generic import View, ListView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.auth.decorators import login_required
@@ -24,7 +20,6 @@ class PostList(ListView):
 
 
 class PostDetail(View):
-
     def get(self, request, slug, *args, **kwargs):
         queryset = Post.objects.all()
         post = get_object_or_404(queryset, slug=slug)
@@ -41,7 +36,7 @@ class PostDetail(View):
                 "comments": comments,
                 "commented": False,
                 "liked": liked,
-                "comment_form": CommentForm()
+                "comment_form": CommentForm(),
             },
         )
 
@@ -73,18 +68,17 @@ class PostDetail(View):
                 "commented": False,
                 "form": form,
                 "liked": liked,
-                "comment_form": CommentForm()
+                "comment_form": CommentForm(),
             },
         )
 
     def form_valid(self, form):
-        """ validate form and connect to user """
+        """validate form and connect to user"""
         form.instance.created_by = self.request.user
         return super().form_valid(form)
 
 
 class PostLike(View):
-
     def post(self, request, slug, *args, **kwargs):
         post = get_object_or_404(Post, slug=slug)
 
@@ -93,7 +87,7 @@ class PostLike(View):
         else:
             post.likes.add(request.user)
 
-        return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+        return HttpResponseRedirect(reverse("post_detail", args=[slug]))
 
 
 @login_required
@@ -103,28 +97,30 @@ def create_post(request):
     """
     if request.user:
 
-        if request.method == 'POST':
+        if request.method == "POST":
             form = BlogPostForm(request.POST, request.FILES)
             if form.is_valid():
                 blog_post = form.save(commit=False)
                 blog_post.author = request.user
                 blog_post.save()
-                messages.info(request, 'Blog has been posted!')
-                return redirect(reverse('home'))
+                messages.info(request, "Blog has been posted!")
+                return redirect(reverse("home"))
             else:
-                messages.error(request, 'Please check the form for errors. \
-                    Blog failed to add.')
+                messages.error(
+                    request,
+                    "Please check the form for errors. \
+                    Blog failed to add.",
+                )
         else:
             form = BlogPostForm()
     else:
-        messages.error(
-            request, 'Sorry, you do not have permission to do that.')
-        return redirect(reverse('home'))
+        messages.error(request, "Sorry, you do not have permission to do that.")
+        return redirect(reverse("home"))
 
-    template = 'new_post.html'
+    template = "new_post.html"
 
     context = {
-        'form': form,
+        "form": form,
     }
     return render(request, template, context)
 
@@ -138,28 +134,30 @@ def update_post(request, slug):
 
         blog_post = get_object_or_404(Post, slug=slug)
 
-        if request.method == 'POST':
-            form = BlogPostForm(
-                request.POST, request.FILES, instance=blog_post)
+        if request.method == "POST":
+            form = BlogPostForm(request.POST, request.FILES, instance=blog_post)
             if form.is_valid():
                 form.save()
-                messages.success(request, 'Blog post updated successfully!')
-                return redirect('home')
+                messages.success(request, "Blog post updated successfully!")
+                return redirect("home")
             else:
-                messages.error(request, 'Please check the form for errors. \
-                    Blog post failed to update.')
+                messages.error(
+                    request,
+                    "Please check the form for errors. \
+                    Blog post failed to update.",
+                )
         else:
             form = BlogPostForm(instance=blog_post)
-            messages.info(request, f'Editing {blog_post.title}')
+            messages.info(request, f"Editing {blog_post.title}")
     else:
-        messages.error(request, 'Sorry, you do not have permission for that.')
-        return redirect(reverse('home'))
+        messages.error(request, "Sorry, you do not have permission for that.")
+        return redirect(reverse("home"))
 
-    template = 'update_post.html'
+    template = "update_post.html"
 
     context = {
-        'form': form,
-        'blog_post': blog_post,
+        "form": form,
+        "blog_post": blog_post,
     }
 
     return render(request, template, context)
@@ -172,14 +170,14 @@ def delete_post(request, blog_post_id):
         blog_post = get_object_or_404(Post, pk=blog_post_id)
         blog_post.delete()
     else:
-        return render(request, 'delete_blog.html')
-    messages.success(request, 'The blog has been deleted successfully!')
+        return render(request, "delete_blog.html")
+    messages.success(request, "The blog has been deleted successfully!")
 
-    return redirect('/')
+    return redirect("/")
 
 
 def subscribe(request):
-    """ A user or guest can subscribe for updates """
+    """A user or guest can subscribe for updates"""
     form = NewsletterForm(request.POST)
     if form.is_valid():
         form = form.save(commit=False)
@@ -188,37 +186,34 @@ def subscribe(request):
         else:
             form.user_id = None
         form.save()
-    return redirect('/')
+    return redirect("/")
 
 
 def unsubscribe(request):
-    """ A user or guest can ubsubscribe / delete their emial from updates """
+    """A user or guest can ubsubscribe / delete their emial from updates"""
     form = NewsletterForm(request.POST)
     if request.user.is_authenticated:
         newsletter = Newsletter.objects.get(user_id=request.user)
         newsletter.delete()
     else:
         if form.is_valid():
-            newsletter = Newsletter.objects.get(email=form.cleaned_data['email'])
+            newsletter = Newsletter.objects.get(email=form.cleaned_data["email"])
             newsletter.delete()
-    return HttpResponseRedirect(reverse('home'))
+    return HttpResponseRedirect(reverse("home"))
 
 
 def editemail(request):
-    """ Allows a user to update their newsletter email if logged in """
+    """Allows a user to update their newsletter email if logged in"""
     form = NewsletterForm(request.POST)
     if request.user.is_authenticated:
         newsletter = Newsletter.objects.get(user_id=request.user)
         newsletter.email = form.data["email"]
         newsletter.save()
         send_mail(
-            'Subject here', 
-            'Here is the message.', 
-            'from@example.com', 
+            "Subject here",
+            "Here is the message.",
+            "from@example.com",
             [form.data["email"]],
-            fail_silently=False, 
+            fail_silently=False,
         )
-        return redirect('create_post')
-    
-
-
+        return redirect("create_post")

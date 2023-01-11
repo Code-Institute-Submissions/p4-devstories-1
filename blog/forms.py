@@ -7,18 +7,22 @@ from .models import Newsletter
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
-        fields = ('body',)
+        fields = ("body",)
         labels = {
-            'body': (''),
+            "body": (""),
         }
 
 
 class BlogPostForm(forms.ModelForm):
     class Meta:
         model = Post
-        fields = ('title', 'slug', 'content', 'featured_image', 'excerpt')
+        fields = ("title", "slug", "content", "featured_image", "excerpt")
         lables = {
-            'title': _(''), 'slug': _(''), 'content': _(''), 'featured_image': _(''), 'excerpt': (''),
+            "title": _(""),
+            "slug": _(""),
+            "content": _(""),
+            "featured_image": _(""),
+            "excerpt": (""),
         }
 
 
@@ -26,8 +30,10 @@ class BlogPostForm(forms.ModelForm):
 class NewsletterForm(forms.ModelForm):
     class Meta:
         model = Newsletter
-        fields = ['email',] 
-    
+        fields = [
+            "email",
+        ]
+
     def __init__(self, *args, **kwargs):
         """
         Add placeholders and classes, remove auto-generated
@@ -35,9 +41,9 @@ class NewsletterForm(forms.ModelForm):
         """
         super().__init__(*args, **kwargs)
         placeholders = {
-            'email': 'Email',
+            "email": "Email",
         }
 
         for field in self.fields:
-            self.fields[field].widget.attrs['class'] = 'border-black rounded-0'
+            self.fields[field].widget.attrs["class"] = "border-black rounded-0"
             self.fields[field].label = False
