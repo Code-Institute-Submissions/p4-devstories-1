@@ -17,35 +17,34 @@
                 value="{{ blog_post.title }}" id="id_title">
             </div>
           </div>
-          <div class="form-group">
-            {{ form.slug.label_tag }}
-            <div id="div_id_slug" class="form-group">
-              <div> 
-                <input type="text" name="slug" maxlength="200" class="textinput textInput form-control" required=""
-                value="{{ blog_post.slug }}" id="id_slug"> 
-              </div>
-              {% if form.slug.errors %}
-              <div class="invalid-feedback">{{ form.slug.errors }}</div>
-              {% endif %}
-            </div>
-            <div class="form-group">
-              {{ form.content.label_tag }}
-              <div id="div_id_content" class="form-group">
-                <div>
-                  <textarea name="content" cols="40" rows="10" class="textarea form-control" required=""
-                  value="{{ blog_post.content }}" id="id_content">
-                  </textarea> 
+                <div class="form-group">
+                  {{ form.slug.label_tag }}
+                  <div id="div_id_slug" class="form-group">
+                    <div>
+                      <input type="text" name="slug" maxlength="200" class="textinput textInput form-control" required="" value="{{ blog_post.slug }}" id="id_slug">
+                    </div>
+                    {% if form.slug.errors %}
+                    <div class="invalid-feedback">{{ form.slug.errors }}</div>
+                    {% endif %}
                 </div>
-                {% if form.content.errors %}
-                <div class="invalid-feedback">{{ form.content.errors }}</div>
-                {% endif %}
+                <div class="form-group">
+                  {{ form.content.label_tag }}
+                  <div id="div_id_content" class="form-group">
+                    <div>
+                      <textarea name="content" cols="40" rows="10" class="textarea form-control" required=""
+                        value="{{ blog_post.content }}" id="id_content">
+                      </textarea>
+                    </div>
+                    {% if form.content.errors %}
+                    <div class="invalid-feedback">{{ form.content.errors }}</div>
+                    {% endif %}
               </div>
 
               <div class="form-group">
                 <div id="div_id_featured_image" class="form-group">
                   {{ form.featured_image.label_tag }}
                   <div> <input type="file" name="featured_image" class="clearablefileinput form-control-file"
-                    value="{{ blog_post.featured_image }}" id="id_featured_image"> </div>
+                      value="{{ blog_post.featured_image }}" id="id_featured_image"> </div>
                   {% if form.featured_image.errors %}
                   <div class="invalid-feedback">{{ form.featured_image.errors }}</div>
                   {% endif %}
@@ -53,12 +52,15 @@
                 <div id="div_id_excerpt" class="form-group">
                   {{ form.excerpt.label_tag }}
                   <div>
-                    <textarea name="excerpt" cols="40" rows="10" class="textarea form-control" id="id_excerpt" value="{{ blog_post.excerpt }}">
+                    <textarea name="excerpt" cols="40" rows="10" class="textarea form-control" id="id_excerpt"
+                      value="{{ blog_post.excerpt }}">
                   </textarea>
                   </div>
                   <div class="my-5 text-center">
                     <button class="btn btn-primary mb-2" type="submit">Update Post</button>
                   </div>
+                </div>
+              </div>
       </form>
     </div>
   </div>
