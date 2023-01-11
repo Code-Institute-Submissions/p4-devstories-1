@@ -1,15 +1,12 @@
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.models import User
-from django.core.mail import BadHeaderError, send_mail
-from django.http import HttpResponse, HttpResponseRedirect
+from django.core.mail import send_mail
+from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, redirect, render, reverse
-from django.template import loader
-from django.urls import reverse_lazy
-from django.views.generic import DeleteView, ListView, UpdateView, View
+from django.views.generic import ListView, View
 
 from .forms import BlogPostForm, CommentForm, NewsletterForm
-from .models import Comment, Newsletter, Post
+from .models import Newsletter, Post
 
 
 class PostList(ListView):
@@ -114,7 +111,10 @@ def create_post(request):
         else:
             form = BlogPostForm()
     else:
-        messages.error(request, "Sorry, you do not have permission to do that.")
+        messages.error(
+            request,
+            "Sorry, you do not have permission to do that."
+        )
         return redirect(reverse("home"))
 
     template = "new_post.html"
@@ -135,17 +135,30 @@ def update_post(request, slug):
         blog_post = get_object_or_404(Post, slug=slug)
 
         if request.method == "POST":
-            form = BlogPostForm(request.POST, request.FILES, instance=blog_post)
-            if form.is_valid():
-                form.save()
-                messages.success(request, "Blog post updated successfully!")
-                return redirect("home")
+            if request.user == blog_post.author:
+                form = BlogPostForm(
+                    request.POST,
+                    request.FILES,
+                    instance=blog_post
+                )
+                if form.is_valid():
+                    form.save()
+                    messages.success(
+                        request,
+                        "Blog post updated successfully!"
+                    )
+                    return redirect("home")
+                else:
+                    messages.error(
+                        request,
+                        "Please check the form for errors. \
+                        Blog post failed to update.",
+                    )
             else:
                 messages.error(
-                    request,
-                    "Please check the form for errors. \
-                    Blog post failed to update.",
+                    request, "sorry you are not authorised to edit this post"
                 )
+                return redirect(reverse("home"))
         else:
             form = BlogPostForm(instance=blog_post)
             messages.info(request, f"Editing {blog_post.title}")
@@ -197,7 +210,9 @@ def unsubscribe(request):
         newsletter.delete()
     else:
         if form.is_valid():
-            newsletter = Newsletter.objects.get(email=form.cleaned_data["email"])
+            newsletter = Newsletter.objects.get(
+                email=form.cleaned_data["email"]
+            )
             newsletter.delete()
     return HttpResponseRedirect(reverse("home"))
 

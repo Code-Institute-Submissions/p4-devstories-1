@@ -34,7 +34,9 @@ class Migration(migrations.Migration):
                 (
                     "featured_image",
                     cloudinary.models.CloudinaryField(
-                        default="placeholder", max_length=255, verbose_name="image"
+                        default="placeholder",
+                        max_length=255,
+                        verbose_name="image"
                     ),
                 ),
                 ("excerpt", models.TextField(blank=True)),

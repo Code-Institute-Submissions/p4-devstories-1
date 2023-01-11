@@ -40,9 +40,6 @@ class NewsletterForm(forms.ModelForm):
         labels and set autofocus on first field
         """
         super().__init__(*args, **kwargs)
-        placeholders = {
-            "email": "Email",
-        }
 
         for field in self.fields:
             self.fields[field].widget.attrs["class"] = "border-black rounded-0"
