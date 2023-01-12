@@ -22,12 +22,13 @@ For this project I wanted to make a blog site for developers where developers ca
     -   #### Returning Visitor Goals
 
         1. As a Returning Visitor, You will be to check to see if there are any new blog posts.
-        1. As a Returning Visitor, You will be able to see if anyone has commented or liked your post.
+        2. As a Returning Visitor, You will be able to see if anyone has commented or liked your post.
 
     -   #### Frequent User Goals
-        1. As a Frequent User, You will be to upload a new blog post.
-        2. As a Frequent User, You will be to edit your pervious blog posts.
+        1. As a Frequent User, You will be to create a new blog post.
+        2. As a Frequent User, You will be to update your blog posts.
         3. As a Frequent User, You will be to delete your blog posts.
+        3. As a Frequent User, You will be to reade your blog posts.
     
     - ### Admin user stories
         1. As a supersuer you will be able to see a list of users who registered on the site
@@ -287,6 +288,7 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 ### For hosting 
   - Start by creating your database on elephantSQL then make sure its set up correctly with the proper settings
+  - I followed the steps on for setting up elphant sql through code institutes video guide 
   
     ![brave_ENEKcAzdhN](https://user-images.githubusercontent.com/43074374/211292027-be8ad86a-69bf-47aa-9a09-604ebea31edb.png)
 
