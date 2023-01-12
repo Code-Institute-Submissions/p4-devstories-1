@@ -26,9 +26,9 @@ For this project I wanted to make a blog site for developers where developers ca
 
     -   #### Frequent User Goals
         1. As a Frequent User, You will be to create a new blog post.
-        2. As a Frequent User, You will be to update your blog posts.
-        3. As a Frequent User, You will be to delete your blog posts.
-        3. As a Frequent User, You will be to reade your blog posts.
+        2. As a Frequent User, You will be to update their blog posts.
+        3. As a Frequent User, You will be to delete their blog posts.
+        3. As a Frequent User, You will be to read their blog posts.
     
     - ### Admin user stories
         1. As a supersuer you will be able to see a list of users who registered on the site
