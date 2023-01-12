@@ -218,16 +218,15 @@ In this section, I will go over each of the sections on the website such as the 
 ### Validator Testing 
 
 - HTML
-  - I ran the site through the html validator
+  - I ran the site through the html validator there were some errors that need fixing
 
 - CSS
-  - I ran the site through the css validator  
+  - I ran the site through the css validator there were some errors that need fixing
 
 ### Further Testing
 -   There seemd to be some issues with the mobile responsivenes
 -   There was also some issues regarding the navigtion bar not being responsive needs fixing
--   The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
--   Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
+-   The Website was tested on Google Chrome, FIrefox and brave browser.
 
 ## Unfixed Bugs
 
