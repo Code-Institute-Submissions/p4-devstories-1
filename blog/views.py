@@ -134,7 +134,8 @@ def update_post(request, slug):
     if request.user:
 
         blog_post = get_object_or_404(Post, slug=slug)
-
+        if blog_post.author != request.user:
+            redirect(reverse("home"))
         if request.method == "POST":
             if request.user == blog_post.author:
                 form = BlogPostForm(
