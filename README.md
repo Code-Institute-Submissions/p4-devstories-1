@@ -6,6 +6,7 @@ Devstories is a blog site for devevelopers to share their knowladge and projects
 
 For this project I wanted to make a blog site for developers where developers can sign up and make a blog about their own projects or anything related to tech my target audience is mainly developers or friends who are developers or looking for inspiration about new tech news or keeping in touch with developer friends and their progress.
 
+![chrome_8m7zbaA5kC](https://user-images.githubusercontent.com/43074374/212039145-93d7763d-2349-4f4f-a7df-1c060cb806be.png)
 
 ## User Experience
 
@@ -16,18 +17,17 @@ For this project I wanted to make a blog site for developers where developers ca
         1. As a First Time Visitor, You will be able to navigate the site with minimal effort and ease.
         2. As a First Time Visitor, You will be able to view a list of current blog posts posted.
         3. As a First Time Visitor, You will be able to sign up and and login.
+        4. As a First Time Visitor, You will be able to sign for the newsletter.
 
     -   #### Returning Visitor Goals
 
-        1. As a Returning Visitor, you will be able to find new or old blog posts that are on the site.
-        2. As a Returning Visitor, You will be able to create a blog.
-        3. As a Returning Vistor, You will be able to update a blog.
-        4. As a Returning Vistor, You will be able to delete your blog.
+        1. As a Returning Visitor, You will be to check to see if there are any new blog posts.
+        1. As a Returning Visitor, You will be able to see if anyone has commented or liked your post.
 
     -   #### Frequent User Goals
-        1. As a Frequent User, You will be to check to see your likes and comments on your blog.
-        2. As a Frequent User, You will be to check to see if there are any new blog posts.
-        3. As a Frequent User, You will be able to sign up to a Newsletter
+        1. As a Frequent User, You will be to upload a new blog post.
+        2. As a Frequent User, You will be to edit your pervious blog posts.
+        3. As a Frequent User, You will be to delete your blog posts.
     
     - ### Admin user stories
         1. As a supersuer you will be able to see a list of users who registered on the site
@@ -84,7 +84,7 @@ For this project I wanted to make a blog site for developers where developers ca
 * ### ERD - Entity Relation Diagram schema
     - (Database Schema Image) Before I started to code this project I created a Diagram Entity Relationship - Database Schema using dbdiagram. I created this to easier understand the database models that I was going to create for this project.
 
-    ![brave_lJG0XpQjQW](https://user-images.githubusercontent.com/43074374/211254730-7aba70b1-5b9f-4c17-b241-10cdf880632e.png)
+    ![brave_CmCzB2JWsj](https://user-images.githubusercontent.com/43074374/212040156-a850818f-7bef-4e64-b30d-9609f3e8c2e4.png)
 
 * # Wireframes
 
@@ -94,6 +94,14 @@ For this project I wanted to make a blog site for developers where developers ca
     ## Blog detail page
 
     ![brave_NQ0fJRyE7X](https://user-images.githubusercontent.com/43074374/211285283-07ffe0a2-0214-45b2-8242-af1c844b7cfa.png)
+
+    ## Create A blog post page
+
+    ![brave_gIDkLiR1iU](https://user-images.githubusercontent.com/43074374/212045355-6b4e60b2-9011-48d7-901a-8ff14c3dadae.png)
+
+    ## Mobile view
+
+    ![brave_sB6i2mnM8f](https://user-images.githubusercontent.com/43074374/212040561-a67da01b-91f3-4201-ab12-1e67bb562197.png)
 
 ### Frameworks, Tech Used
 
@@ -129,44 +137,72 @@ In this section, I will go over each of the sections on the website such as the 
 - __Navigation Bar__
 
   - Featured on all three pages, the full responsive navigation bar includes links to the Logo, Home page, Gallery and Sign Up page and is identical in each page to allow for easy navigation. There is a a section for the hero image on the home page 
-  - This section will allow the user to easily navigate from page to page across all devices without having to revert back to the previous page via the ‘back’ button. 
+  - This section will allow the user to easily navigate from page to page across all devices without having to revert back to the previous page via the ‘back’ button.
+
+  ![chrome_hbhay1ERXT](https://user-images.githubusercontent.com/43074374/212045508-9e686763-c063-4b73-8f86-c53bdfdb9955.png)
+
+  - This is if a user is logged in 
+
+  ![chrome_I8fiFhBl7S](https://user-images.githubusercontent.com/43074374/212045695-2c132a74-eb4a-4ac1-b3b5-fd901bf7f706.png)
+
 
 - __The Main Page Content__
 
   - This is the main pages content where it displayes the hero image and all the blogs desplayed on the website.
 
+![chrome_HIjXE26s0Z](https://user-images.githubusercontent.com/43074374/212045769-b95f4429-1a25-4a21-b635-dd7b9bb82c68.png)
 
 - __Blog Page__
 
   - The blog page Is the New post page this is only accessible after a user has logged in as you can see in the navigation bar the login and register links change to new post and log out.
 
-  - You can also see here on the same page the rest of the form where the user can create a blog post there is also the option for the user to update their email for the newsletter at the bottom of the page.
+  ![chrome_vbxvXGM19l](https://user-images.githubusercontent.com/43074374/212045884-75e6d15c-a76f-4e38-8051-853284b70a82.png)
+
 
 - __Detailed Blog Page__
 
   - The Detailed blog page is where vistors who arent signed up can read more about a blog but if a user is signed up only that user who created the blog will have the option of updating or deleting the post. Also once the user logged in they will have the option for 
  
-  - The view for when a visitor wants to see the detailed version.
+  - The view for when a visitor wants to see the detailed version and options to edit or delete their post if logged in whe a user is not logged in this wont be displayed
 
-  - The View for when a user is logged in these are the options they have for their post.
+  ![chrome_ltVjyy40uW](https://user-images.githubusercontent.com/43074374/212045974-ada99b14-939b-4cf0-b222-032e2177ef2d.png)
+
 
   - This is what it looks like for the user when they want to post a comment on a post once they are logged in.
+
+  
+  ![chrome_YXOIcSYhmN](https://user-images.githubusercontent.com/43074374/212046177-7fd17b7e-4e76-4248-a727-4f7fef3ca175.png)
+
 
 - __Blog Features__
 
   - This feature is for when a user likes a blog post the counter increments by one for every like
 
+  ![chrome_G8BmnQ8JQ8](https://user-images.githubusercontent.com/43074374/212046315-a7a1cd09-59ad-4ba5-b5a7-a03593cfd562.png)
+
 - __The Footer__ 
 
   - The footer of the website just consists of the name and some text and the copyright symbol.
+
+  ![chrome_E7b4bClEQD](https://user-images.githubusercontent.com/43074374/212046427-9635a569-0d56-42a1-a4d8-05a84b8a8668.png)
 
 - __The Sign Up Page__
 
   - The Sign up page consists of the navigation and hero image and a form which will allow you to create an account on the website
 
+  ![chrome_RpXtNPJKC8](https://user-images.githubusercontent.com/43074374/212046501-9f398472-38c8-4007-af11-7ce9c363812a.png)
+
 - __The login Page__
 
   - The Sign in or login page consists of the navigation and hero image and a form you can fill out to login to your account
+
+  ![chrome_HdUDtPKnQm](https://user-images.githubusercontent.com/43074374/212046613-f0240645-5fdb-48ae-bd0b-2d6afb2c7cd9.png)
+
+- __The Newsletter Section__
+
+  - The newsletter section is where users can register their email they use to get notified for any changes or posts being added to the site
+
+  ![chrome_fTwsDRzJqx](https://user-images.githubusercontent.com/43074374/212047112-49ccf8dc-4132-4890-850c-3fef64807a55.png)
 
 ## Testing 
 
@@ -198,6 +234,8 @@ Some bugs have come up during development one is the comments and sending out ne
 
 ### Bug One Comments
 Comments seem to duplicate when you refresh after posting a comment
+
+![chrome_tLgtdwGjeF](https://user-images.githubusercontent.com/43074374/212047409-1a557f9e-ca89-40ac-b71b-af6f12794d26.png)
 
 ### Bug Two Newsletter emails
 I have implemented the custom logic for a user to add their email to the newsletter its just sending out emails for notifications is slighty broken at the url /newsletter/send seems to be loading for a while then gets suck on a 502 error while trying to use send grid I tried using mail gun before but I ran into some issues with their support because I made a mistake in the settings on another project which made them lock my account making it unsuable for this project.
